@@ -4,7 +4,7 @@
 
 **AI evaluation and operations.** New York City. *Open to new roles.*
 
-I've worked both sides of the same problem: running operations teams against measurable quality standards, and testing whether AI systems hold up against them. I led a 12-person team at McMaster-Carr, red-teamed frontier models on contract for OpenAI, and founded a company building expert-governed evaluations for medical AI.
+Across my roles, I’ve been responsible for making quality concrete. At McMaster-Carr, I led a 12-person operations team against clear performance standards. At OpenAI, I tested where frontier models broke down. More recently, I founded a company building expert-led evaluations for medical AI.
 
 ---
 
@@ -50,17 +50,3 @@ Agentic coding tools are my primary development environment — logic-console wa
 ## Contact
 
 **mkfhelzubeir@gmail.com** · **[LinkedIn](https://www.linkedin.com/in/elzubeir/)**
-<!--
-**mkelzubeir/mkelzubeir** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
