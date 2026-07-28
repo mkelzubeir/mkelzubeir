@@ -17,7 +17,11 @@ Designed and shipped solo, deployed to production annotators. Supabase/Postgres 
 
 Built at Insaan, a company I founded. All case data in the repo is synthetic.
 
-<!-- ADD PROJECT 2 HERE -->
+### [job-radar](https://github.com/mkelzubeir/job-radar) — resume-matched job discovery engine
+
+Scans the live career boards of 537 verified companies across 7 ATS platforms (Ashby, Greenhouse, Lever, and others) through their public JSON APIs, then ranks every posting against an uploaded resume using a retrieval-and-rerank cascade: corpus-adaptive TF-IDF retrieval, optional local embeddings in-browser, and an LLM stage that deep-reads full job descriptions and runs a comparative tournament — producing tiered shortlists with fit reasons, gaps, and an apply angle per role.
+
+Fully static and backend-free by design: resumes parse in-browser with pdf.js and never leave the device, and AI stages call the Anthropic API directly under the user's own key. The company list isn't hand-maintained — a discovery pipeline probes thousands of candidate board slugs against live ATS APIs and ships only verified, currently-hiring boards, with a health-check script to keep the list green. Deployed free on GitHub Pages: [live app](https://mkelzubeir.github.io/job-radar/).
 
 <!-- ADD PROJECT 3 HERE -->
 
