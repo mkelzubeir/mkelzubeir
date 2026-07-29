@@ -4,7 +4,7 @@
 
 **AI evals, builder-operator.** New York City. *Open to new roles.*
 
-Across my roles, I’ve been responsible for making quality concrete. At McMaster-Carr, I led a 12-person operations team against clear performance standards. At OpenAI, I tested where frontier models broke down. More recently, I founded a company building expert-led evaluations for medical AI.
+Across my roles, I’ve been responsible for making quality concrete. At McMaster-Carr, I led a 12-person operations team while defining performance standards. At OpenAI, I tested where frontier models broke down. More recently, I founded a company building expert-led evaluations for medical AI.
 
 ---
 
