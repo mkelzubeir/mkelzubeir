@@ -17,13 +17,18 @@ Designed and shipped solo, deployed to production annotators. Supabase/Postgres 
 
 Built at Insaan, a company I founded. All case data in the repo is synthetic.
 
+### [ai-interviewer](https://github.com/mkelzubeir/ai-interviewer) — voice-first AI mock interviewer
+
+Upload a resume and job description, then sit a real spoken interview: an AI interviewer that asks questions grounded in your actual background and the role, listens over live speech-to-speech (OpenAI Realtime over WebRTC), handles interruptions and turn-taking with server-side voice activity detection, and probes with follow-ups the way a human interviewer would. Every session ends in a structured feedback report.
+
+Static site on GitHub Pages with exactly one server-side step, minting ephemeral Realtime tokens, pushed into a JWT-verified, rate-limited Supabase Edge Function so the permanent API key never ships to a browser. Local-first by default: in-progress sessions live in localStorage and the deterministic question engine runs entirely client-side, with optional sign-in to persist reports behind row-level security. 120+ unit tests and a Playwright suite that runs against the production static build in CI, so subpath and fallback bugs get caught before deploy. [Live app](https://mkelzubeir.github.io/ai-interviewer/).
+
 ### [job-radar](https://github.com/mkelzubeir/job-radar) — resume-matched job discovery engine
 
 Scans the live career boards of 537 verified companies across 7 ATS platforms (Ashby, Greenhouse, Lever, and others) through their public JSON APIs, then ranks every posting against an uploaded resume using a retrieval-and-rerank cascade: corpus-adaptive TF-IDF retrieval, optional local embeddings in-browser, and an LLM stage that deep-reads full job descriptions and runs a comparative tournament — producing tiered shortlists with fit reasons, gaps, and an apply angle per role.
 
 Fully static and backend-free by design: resumes parse in-browser with pdf.js and never leave the device, and AI stages call the Anthropic API directly under the user's own key. The company list isn't hand-maintained — a discovery pipeline probes thousands of candidate board slugs against live ATS APIs and ships only verified, currently-hiring boards, with a health-check script to keep the list green. Deployed free on GitHub Pages: [live app](https://mkelzubeir.github.io/job-radar/).
 
-<!-- ADD PROJECT 3 HERE -->
 
 ---
 
