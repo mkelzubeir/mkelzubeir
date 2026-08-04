@@ -10,18 +10,18 @@ Across my roles, I’ve been responsible for making quality concrete. At McMaste
 
 ## Projects
 
+### [ai-interviewer](https://github.com/mkelzubeir/ai-interviewer) — voice-first AI mock interviewer
+
+Upload a resume and job description, then sit a real spoken interview: an AI interviewer that asks questions grounded in your actual background and the role, listens over live speech-to-speech (OpenAI Realtime over WebRTC), handles interruptions and turn-taking with server-side voice activity detection, and probes with follow-ups the way a human interviewer would. Every session ends in a structured feedback report.
+
+Static site on GitHub Pages with exactly one server-side step, minting ephemeral Realtime tokens, pushed into a JWT-verified, rate-limited Supabase Edge Function so the permanent API key never ships to a browser. Local-first by default: in-progress sessions live in localStorage and the deterministic question engine runs entirely client-side, with optional sign-in to persist reports behind row-level security. 120+ unit tests and a Playwright suite that runs against the production static build in CI, so subpath and fallback bugs get caught before deploy. [Live app](https://mkelzubeir.github.io/ai-interviewer/).
+
 ### [logic-console](https://github.com/mkelzubeir/logic-console) — clinical red-teaming platform
 Trauma surgeons capture gold-standard management plans for clinical scenarios, then blind-grade frontier model outputs against them using span-level severity classification (acceptable / harmful / lethal) with structured rationales, plus a transcript-level omission check — because a commission-only model can't catch dangerous absences.
 
 Designed and shipped solo, deployed to production annotators. Supabase/Postgres with row-level security across all clinical tables, closed-registration auth with annotator identity derived from verified JWTs, and provenance controls throughout (immutable snapshots, dated model version strings). Includes an evaluation harness for generating comparison data across models.
 
 Built at Insaan, a company I founded. All case data in the repo is synthetic.
-
-### [ai-interviewer](https://github.com/mkelzubeir/ai-interviewer) — voice-first AI mock interviewer
-
-Upload a resume and job description, then sit a real spoken interview: an AI interviewer that asks questions grounded in your actual background and the role, listens over live speech-to-speech (OpenAI Realtime over WebRTC), handles interruptions and turn-taking with server-side voice activity detection, and probes with follow-ups the way a human interviewer would. Every session ends in a structured feedback report.
-
-Static site on GitHub Pages with exactly one server-side step, minting ephemeral Realtime tokens, pushed into a JWT-verified, rate-limited Supabase Edge Function so the permanent API key never ships to a browser. Local-first by default: in-progress sessions live in localStorage and the deterministic question engine runs entirely client-side, with optional sign-in to persist reports behind row-level security. 120+ unit tests and a Playwright suite that runs against the production static build in CI, so subpath and fallback bugs get caught before deploy. [Live app](https://mkelzubeir.github.io/ai-interviewer/).
 
 ### [job-radar](https://github.com/mkelzubeir/job-radar) — resume-matched job discovery engine
 
