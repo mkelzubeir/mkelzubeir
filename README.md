@@ -10,6 +10,12 @@ Across my roles, I’ve been responsible for making quality concrete. At McMaste
 
 ## Projects
 
+### [atlas-industrial-ai](https://github.com/mkelzubeir/atlas-industrial-ai) — industrial-distribution voice agent
+
+A voice agent for a synthetic industrial distributor, informed by workflows I managed in industrial customer-service operations. In one spoken conversation, a caller can check an order or shipment, resolve an ambiguous product description, verify inventory, request a quote, and modify an eligible order line. The ElevenLabs agent manages the conversation and selects tools; seven FastAPI webhook APIs remain authoritative about business data and permitted actions.
+
+Business rules are enforced server-side, including explicit confirmation for writes, line-level edit eligibility, and inventory constraints. Successful and rejected changes are audited, RFQ creation is idempotent, and optimistic concurrency prevents stale order updates. A Next.js Developer View exposes tool arguments, responses, and state changes during each call. The repository includes 132 passing pytest tests and 12 conversational evaluation scenarios covering hallucinated facts, premature writes, ambiguous products, tool failures, and dropped intents. All customers, products, orders, and operational rules are synthetic. [Live app](https://atlas-industrial-ai.vercel.app/).
+
 ### [ai-interviewer](https://github.com/mkelzubeir/ai-interviewer) — voice-first AI mock interviewer
 
 Upload a resume and job description, then sit a real spoken interview: an AI interviewer that asks questions grounded in your actual background and the role, listens over live speech-to-speech (OpenAI Realtime over WebRTC), handles interruptions and turn-taking with server-side voice activity detection, and probes with follow-ups the way a human interviewer would. Every session ends in a structured feedback report.
@@ -22,13 +28,6 @@ Trauma surgeons capture gold-standard management plans for clinical scenarios, t
 Designed and shipped solo, deployed to production annotators. Supabase/Postgres with row-level security across all clinical tables, closed-registration auth with annotator identity derived from verified JWTs, and provenance controls throughout (immutable snapshots, dated model version strings). Includes an evaluation harness for generating comparison data across models.
 
 Built at Insaan, a company I founded. All case data in the repo is synthetic.
-
-### [job-radar](https://github.com/mkelzubeir/job-radar) — resume-matched job discovery engine
-
-Scans the live career boards of 537 verified companies across 7 ATS platforms (Ashby, Greenhouse, Lever, and others) through their public JSON APIs, then ranks every posting against an uploaded resume using a retrieval-and-rerank cascade: corpus-adaptive TF-IDF retrieval, optional local embeddings in-browser, and an LLM stage that deep-reads full job descriptions and runs a comparative tournament — producing tiered shortlists with fit reasons, gaps, and an apply angle per role.
-
-Fully static and backend-free by design: resumes parse in-browser with pdf.js and never leave the device, and AI stages call the Anthropic API directly under the user's own key. The company list isn't hand-maintained — a discovery pipeline probes thousands of candidate board slugs against live ATS APIs and ships only verified, currently-hiring boards, with a health-check script to keep the list green. Deployed free on GitHub Pages: [live app](https://mkelzubeir.github.io/job-radar/).
-
 
 ---
 
